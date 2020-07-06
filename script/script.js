@@ -4,7 +4,7 @@ $(document).ready(
 
     const validate = function (texto) {
         if (texto == null ){
-            return "Repositório sem descrição"
+            return " - "
         }
         if (texto.length >= 100){
             return texto.substring(0,100) + " ...";
@@ -14,6 +14,20 @@ $(document).ready(
         }
     }
 
+    $('.scrollTo').click(function (){
+        console.log('click')
+        var goto = $(this).attr('href');
+        
+        if($(goto).length){
+            var getOffset = $(goto).offset().top;
+            console.log(getOffset)
+            $('html').animate({
+                scrollTop: getOffset
+            }, 1000)
+        }
+        return false;
+    })
+
     $.ajax({
         method: 'GET',
         url: 'https://api.github.com/users/vanlmc/repos',
@@ -22,7 +36,7 @@ $(document).ready(
             console.log(data)
             $.map(data, function(repo, i){  //passa o index também
 
-                $('#repos').append('<div> <h2>' + repo.full_name + '</h2>' + '<p>'+ validate(repo.description) +  ' <a target="_blank" href="https://github.com/'+repo.full_name+'">ver mais</a>'+  '</p>' + '</div>')
+                $('#repos').append('<tr> <td> <a target="_blank" href="https://github.com/'+repo.full_name+'">' + repo.full_name + '</a></td>' + '<td>'+ validate(repo.description) +  '</td> ' + '</tr>')
             })
         })
 

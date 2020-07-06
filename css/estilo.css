@@ -50,11 +50,26 @@ h2 {
 
 
 .social-media {
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+}
+
+.row {
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+}
+
+.col-4 {
+    width: 33%;
+}
+
+.arrow {
+    height: 50px;
+    width: 50px;
 }
 
 .social-media>div {
+    text-align: center;
     padding: 20px;
 }
 
@@ -74,6 +89,27 @@ h2 {
     height: 100vh;
 }
 
+
+.reposTable {
+    color: white;
+    padding: 20px;
+   /* border: 1px solid white;*/
+    border-radius: 50px;
+}
+
+.reposTable>tr>td{
+    padding: 10px;
+}
+
+.reposTable>tr>td>a{
+    font-weight: 900;
+    text-decoration: none;
+}
+.projectsSection {
+    margin-top: 50px;
+}
+
+/*
 .repos {
     display: flex;
     flex-direction: column;
@@ -91,4 +127,4 @@ h2 {
     position: absolute;
 }
 
-
+*/
