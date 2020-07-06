@@ -14,6 +14,8 @@ h2 {
 
 .header{
     background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 100vh;
     width: 100%;
 }
@@ -49,9 +51,8 @@ h2 {
 }
 
 
-.social-media {
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
+.icons {
+    text-align: right !important;
 }
 
 .row {
@@ -108,6 +109,8 @@ h2 {
 .projectsSection {
     margin-top: 50px;
 }
+
+
 
 /*
 .repos {
