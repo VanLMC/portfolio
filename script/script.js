@@ -36,7 +36,7 @@ $(document).ready(
             console.log(data)
             $.map(data, function(repo, i){  //passa o index também
 
-                $('#repos').append('<tr> <td> <a target="_blank" href="https://github.com/'+repo.full_name+'">' + repo.full_name + '</a></td>' + '<td>'+ validate(repo.description) +  '</td> ' + '</tr>')
+                $('#repos').append('<tr> <td> <a target="_blank" href="https://github.com/'+repo.full_name+'">' + repo.full_name + '</a></td>' + '<td class="description">'+ validate(repo.description) +  '</td> ' + '</tr>')
             })
         })
 

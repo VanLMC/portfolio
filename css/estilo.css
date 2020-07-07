@@ -20,6 +20,15 @@ h2 {
     width: 100%;
 }
 
+
+@media screen and (max-width: 600px) {
+    .header    {
+        background-size: auto;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
 .container-topo {
     padding: 25px;
     width: 100%;
@@ -64,6 +73,22 @@ h2 {
     width: 33%;
 }
 
+.col-3 {
+    width: 25%;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column !important;
+    }
+    .col-4 {
+        width: 100% !important;
+    }
+    .col-3 {
+        width: 100% !important;
+    }
+}
+
 .arrow {
     height: 50px;
     width: 50px;
@@ -78,6 +103,7 @@ h2 {
     height: 30px;
     width: 30px;
 }
+
 
 
 .social-media>div>a>img:hover {
@@ -101,6 +127,15 @@ h2 {
 .reposTable>tr>td{
     padding: 10px;
 }
+@media screen and (max-width: 600px) {
+    .reposTable {
+        font-size: 12px;
+    }
+     .description{
+        display: none;
+    }
+}
+
 
 .reposTable>tr>td>a{
     font-weight: 900;
@@ -110,6 +145,18 @@ h2 {
     margin-top: 50px;
 }
 
+.resumeSection {
+    padding: 75px;
+}
+
+.resumeSection>div>div>h2 {
+    margin-bottom: 20px;
+}
+
+footer>div {
+    text-align: center;
+    background-color: #990000;
+}
 
 
 /*
